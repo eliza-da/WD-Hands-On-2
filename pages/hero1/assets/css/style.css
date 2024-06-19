@@ -1,108 +1,158 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
-
-:root {
-  --color-accent-1: #c6a288;
-  --color-accent-2: #c99678;
-  --color-secondary-1: #4b403e;
-  --color-secondary-2: #120d0c;
-  --color-primary-1: #f3f3f3;
-  --color-primary-2: #d6d6d6;
-
-  --header-font: "Poppins", sans-serif;
-  --content-font: "Urbanist", sans-serif;
-}
-
-*,
-*::before,
-*::after {
-  margin: 0;
+*, *::before, *::after, h6, p {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: var(--content-font);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--header-font);
+/* Dev */
+.contents,
+.contents * {
+  /* outline: 1px dashed yellow; */
 }
 
 body {
-  color: var(--color-primary-1);
-  background: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 100vh;
+  height: 300vh;
+  width: 100dvh;
+  overflow-x: hidden;
 }
 
-.wallpaper {
-  position: absolute;
+.hero-background {
+  width: 100dvw;
+  height: 100dvh;
+  background: url('../img/grassland-wallpaper.jpg');
   object-fit: cover;
-  z-index: -1;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  filter: sepia(0.4) hue-rotate(-10deg) opacity(0.6);
+  position: relative;
+
+  & .mascot {
+      position: absolute;
+      right: 2rem;
+      bottom: 0;
+      height: 15rem;
+  }
 }
 
-.top {
+.contents {
+  width: 100dvw;
+  height: calc(100dvh - 60px);
   display: flex;
-  flex-direction: column;
-  padding-top: 5rem;
   align-items: center;
-  gap: 0.2rem;
-  height: 100vh;
-
-  & .course {
-    font-size: 2rem;
-    letter-spacing: 0.8rem;
-    font-weight: 300;
-  }
-
-  & .title {
-    font-size: 5rem;
-    letter-spacing: 1rem;
-    padding-left: 7rem;
-  }
-
-  & .subtitle {
-    font-weight: 500;
-    letter-spacing: 1rem;
-  }
-}
-
-.bottom {
-  padding-bottom: 5rem;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  font-size: 1rem;
+  color: white;
+  justify-content: space-between;
 
-  & .year {
-    font-weight: 300;
+  & .top {
+      & .logo {
+          height: 50px;
+      }
   }
 
-  & .logo {
-    height: 50px;
-  }
-}
+  & .middle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      
+      & .note {
+          font-size: 1rem;
+          padding: 2rem;
+          }
 
-#loom-companion-mv3,
-.fiveserver-info-wrapper {
-  display: none;
+          & .card {
+              padding: 2rem;
+              width: 35dvw;
+              background: rgba(255, 255, 255, 0.1);
+              box-shadow: 0 4px 30px rgba(0, 0, 0, 0.301);
+              backdrop-filter: blur(10px);
+              -webkit-backdrop-filter: blur(10px);
+              font-size: 1.2rem;
+              border: 1px solid rgba(245, 245, 245, 0.212);
+              color: white;
+              border-radius: 15px;
+
+              & .card-img {
+                  position: absolute;
+                  height: calc(100% - 4rem);
+                  width: fit-content;
+                  right: 2rem;
+                  z-index: -1;
+              }
+
+              & .title {
+                  padding: 1rem 0;
+                  border-bottom: 1px white solid;
+                  width: fit-content;
+                  font-weight: 700;
+                  letter-spacing: 1.2rem;
+                  filter: invert(1);
+              }
+
+              & .description {
+                  padding: 1rem 0;
+                  width: 65%;
+                  font-size: 1rem;
+                  text-align: justify;
+                  text-justify: inter-word;
+                  filter: invert(1);
+              }
+
+              & i {
+                  filter: invert(1);
+              }
+          }
+
+      & .others {
+          display: flex;
+          justify-content: space-between;
+          width: 35dvw;
+          padding: 2rem;
+
+          p {
+              filter: invert(1);
+              padding: 0;
+              margin: 0;
+          }
+      }
+  }
+
+  & .bottom {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      filter: invert(1);
+
+      & .creators {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          & h6 {
+              padding: 0;
+              margin: 0;
+              font-weight: 650;
+          }
+
+          & p {
+              padding: 0;
+              margin: 0;
+          }
+      }
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-  .top {
-    & .title {
-      font-size: 4.5rem;
-      padding-left: 0;
-    }
+  .contents {
+      & .middle {
+          & .card, & .others {
+              width: 70dvw;
+
+          }
+      }
+
+  }
+
+  .hero-background {
+      & .mascot {
+          height: 10rem;
+      }
   }
 }
