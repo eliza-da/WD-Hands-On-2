@@ -60,10 +60,10 @@
 Description of the project in details.
 
 Guiding Question:
-- What is the project
-- Whats the purpose
-- What are key components
-- What technology used and how it is used
+- What is the project: A hero section and a card display are common elements in web design, often used to improve the visual appeal and user experience of a website.
+- Whats the purpose: This section is used to grab attention and convey the core message or purpose of the website.
+- What are key components: Header, Footer, Title, Background and Buttons.
+- What technology used and how it is used: Creating a hero section and a card display on a website involves a combination of technologies and tools, primarily focusing on HTML, CSS, and JavaScript.
 
 ### Key Components
 <!-- TODO: List of Key Components -->
