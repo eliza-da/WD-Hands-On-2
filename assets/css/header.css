@@ -85,32 +85,16 @@ footer {
     cursor: pointer; 
 }  
 
-@media screen and (max-width: 1000px) {
+#loom-companion-mv3,
+.fiveserver-info-wrapper {
+  display: none;
+}
 
-    main {
-        flex-direction: column; 
+@media only screen and (max-width: 1024px) {
+  .top {
+    & .title {
+      font-size: 4.5rem;
+      padding-left: 0;
     }
-
-    .left img {
-        width: 100%; 
-    }
-
-    .right {
-        padding-top: 40px; 
-        text-align: center;  
-    }
-
-    h1 {
-        font-size: 1.8em; 
-    }
-
-    button {
-        padding: 15px 90px; 
-    }
-
-    footer {
-        text-align: center;
-        padding-top: 80px;  
-    } 
-
+  }
 }
