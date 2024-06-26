@@ -6,8 +6,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 body {
-    background: hsl(257, 40%, 49%) url("images/bg-desktop.svg") no-repeat;
-    padding: 20px 60px;
+    background: hsl(257, 40%, 49%) url("/assets/img/Stars\ Pattern.png") no-repeat;
+    background-repeat:no-repeat;
+    background-size:cover;
+    padding: 50px 50px;
 }
 header img {
     width: 100px;
@@ -22,10 +24,9 @@ main {
 }
 
 .left {
-    padding-right: 2.5em;
-    height: auto;
-    width:
+    padding-right: 20px;
 }
+
 
 .right {
     margin-top: 70px;
@@ -52,6 +53,7 @@ button {
     color: #674baf;
     font-size: 1em;
     font-weight: 600;
+    text-decoration: none;
     transition: 0.3s all ease;
 }
 
@@ -94,7 +96,8 @@ footer {
     }
 
     .left img {
-        width: 100%;
+        width: 70%;
+        align-content: center;
     }
 
     .right {
